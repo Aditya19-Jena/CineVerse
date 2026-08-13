@@ -3,8 +3,8 @@ const cors = require("cors");
 require("dotenv").config();
 
 console.log(
-    "OpenAI API key loaded:",
-    Boolean(process.env.OPENAI_API_KEY)
+    "Gemini API key loaded:",
+    Boolean(process.env.GEMINI_API_KEY)
 );
 
 const app = express();
