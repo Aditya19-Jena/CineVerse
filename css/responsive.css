@@ -1,0 +1,1482 @@
+/*========================================
+NAVIGATION
+\======================================== \*/
+
+@media (max-width: 1024px) {
+
+.nav-links {
+    gap: 18px;
+}
+
+.nav-link span {
+    font-size: 13px;
+}
+
+}
+
+@media (max-width: 850px) {
+
+
+.nav-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 280px;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px 25px;
+    background: #111;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 9999;
+}
+
+.nav-links.active {
+    transform: translateX(0);
+}
+
+.nav-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    color: #fff;
+}
+
+.nav-link.active::after {
+    display: none;
+}
+
+.menu-btn {
+    display: flex;
+    position: relative;
+    z-index: 10000;
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+
+.navbar {
+    height: 64px;
+    padding: 0 16px;
+}
+
+.nav-links {
+    top: 64px;
+    width: 100%;
+    height: calc(100vh - 64px);
+}
+}
+
+
+
+/* ========================================
+   TRENDING MOVIES
+======================================== */
+
+@media (max-width: 1100px) {
+
+    #trending-movies {
+        padding: 70px 4%;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    #trending-movies {
+        padding: 60px 4%;
+    }
+
+    #trending-movies .section-title {
+        font-size: 24px;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .movie-title {
+        font-size: 14px;
+    }
+
+    .movie-meta {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    #trending-movies {
+        padding: 50px 20px;
+    }
+
+    #trending-movies .section-header {
+        margin-bottom: 22px;
+    }
+
+    #trending-movies .section-title {
+        font-size: 21px;
+        padding-left: 12px;
+    }
+
+    #trending-movies .section-title::before {
+        width: 3px;
+        height: 21px;
+    }
+
+    .view-all-btn {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+    .view-all-btn i {
+        font-size: 10px;
+    }
+
+    .trending-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 14px;
+    }
+
+    .movie-card > img {
+        border-radius: 9px;
+    }
+
+    .movie-info {
+        padding-top: 9px;
+    }
+
+    .movie-title {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .movie-meta {
+        font-size: 11px;
+    }
+
+    .movie-rating i {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #trending-movies {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .trending-grid {
+        gap: 16px 12px;
+    }
+
+    #trending-movies .section-title {
+        font-size: 19px;
+    }
+
+    .view-all-btn {
+        padding: 7px 9px;
+    }
+}
+
+/* ========================================
+   POPULAR MOVIES
+======================================== */
+
+@media (max-width: 1100px) {
+
+    #popular-movies {
+        padding: 70px 4%;
+    }
+
+    .popular-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    #popular-movies {
+        padding: 60px 4%;
+    }
+
+    #popular-movies .section-title {
+        font-size: 24px;
+    }
+
+    .popular-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .popular-grid .movie-title {
+        font-size: 14px;
+    }
+
+    .popular-grid .movie-meta {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    #popular-movies {
+        padding: 50px 20px;
+    }
+
+    #popular-movies .section-header {
+        margin-bottom: 22px;
+    }
+
+    #popular-movies .section-title {
+        font-size: 21px;
+        padding-left: 12px;
+    }
+
+    #popular-movies .section-title::before {
+        width: 3px;
+        height: 21px;
+    }
+
+    #popular-movies .view-all-btn {
+        padding: 8px 11px;
+        font-size: 11px;
+    }
+
+    #popular-movies .view-all-btn i {
+        font-size: 10px;
+    }
+
+    .popular-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 14px;
+    }
+
+    .popular-grid .movie-card > img {
+        border-radius: 9px;
+    }
+
+    .popular-grid .movie-info {
+        padding-top: 9px;
+    }
+
+    .popular-grid .movie-title {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .popular-grid .movie-meta {
+        font-size: 11px;
+    }
+
+    .popular-grid .movie-rating i {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #popular-movies {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .popular-grid {
+        gap: 16px 12px;
+    }
+
+    #popular-movies .section-title {
+        font-size: 19px;
+    }
+
+    #popular-movies .view-all-btn {
+        padding: 7px 9px;
+    }
+}
+
+/* ========================================
+   BOLLYWOOD MOVIES
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .bollywood-section {
+        padding: 75px 4%;
+    }
+
+    .bollywood-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 21px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .bollywood-section {
+        padding: 65px 4%;
+    }
+
+    .bollywood-section .section-title {
+        font-size: 27px;
+    }
+
+    .bollywood-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 19px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .bollywood-section {
+        padding: 55px 20px;
+    }
+
+    .bollywood-section .section-header {
+        align-items: flex-end;
+        margin-bottom: 27px;
+    }
+
+    .bollywood-section .section-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .bollywood-section .section-title {
+        font-size: 22px;
+    }
+
+    .bollywood-section .section-title::after {
+        width: 35px;
+        height: 2px;
+        margin-top: 9px;
+    }
+
+    .bollywood-section .view-all-btn {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .bollywood-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 14px;
+    }
+
+    .bollywood-grid .movie-card > img {
+        border-radius: 5px;
+    }
+
+    .bollywood-grid .movie-info {
+        padding-top: 10px;
+    }
+
+    .bollywood-grid .movie-title {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .bollywood-grid .movie-meta {
+        font-size: 10px;
+    }
+
+    .bollywood-grid .movie-rating i {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .bollywood-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .bollywood-section .section-title {
+        font-size: 20px;
+    }
+
+    .bollywood-section .section-label {
+        font-size: 8px;
+    }
+
+    .bollywood-grid {
+        gap: 18px 12px;
+    }
+}
+
+/* ========================================
+   FAQ
+======================================== */
+
+@media (max-width: 800px) {
+
+    #faq {
+        padding: 85px 5% 95px;
+    }
+
+    #faq .faq-header {
+        margin-bottom: 40px;
+    }
+
+    #faq .faq-title {
+        font-size: 32px;
+    }
+
+    #faq .faq-description {
+        font-size: 14px;
+    }
+
+    #faq .faq-question {
+        padding: 20px;
+    }
+
+    #faq .faq-answer p {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    #faq {
+        padding: 70px 20px 80px;
+    }
+
+    #faq .faq-label {
+        font-size: 9px;
+        letter-spacing: 2.2px;
+    }
+
+    #faq .faq-label::before, #faq .faq-label::after {
+        width: 16px;
+    }
+
+    #faq .faq-title {
+        font-size: 27px;
+        letter-spacing: -0.5px;
+    }
+
+    #faq .faq-description {
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    #faq .faq-list {
+        gap: 10px;
+    }
+
+    #faq .faq-item {
+        border-radius: 10px;
+    }
+
+    #faq .faq-question {
+        padding: 18px 17px;
+        font-size: 14px;
+    }
+
+    #faq .faq-question i {
+        width: 27px;
+        height: 27px;
+        font-size: 10px;
+    }
+
+    #faq .faq-answer p {
+        padding: 0 17px 18px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #faq {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #faq .faq-title {
+        font-size: 24px;
+    }
+
+    #faq .faq-question {
+        padding: 16px 14px;
+        font-size: 13px;
+    }
+
+    #faq .faq-answer p {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .site-footer {
+        padding: 75px 5% 25px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1.8fr
+            1fr
+            1fr
+            1fr;
+        gap: 45px;
+    }
+
+    .footer-brand {
+        grid-column: span 4;
+        max-width: 500px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+        margin-bottom: 5px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-bottom p:last-child {
+        max-width: 100%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .site-footer {
+        padding: 65px 20px 22px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 38px 25px;
+        padding-bottom: 45px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-brand h2 {
+        font-size: 26px;
+    }
+
+    .footer-description {
+        max-width: 330px;
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 18px;
+        font-size: 12px;
+    }
+
+    .footer-column > a {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .footer-social {
+        gap: 8px;
+    }
+
+    .footer-social a {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+    }
+
+    .footer-social i {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        padding-top: 18px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+
+    .footer-bottom p:first-child {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .site-footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer-content {
+        gap: 32px 18px;
+    }
+
+    .footer-brand h2 {
+        font-size: 24px;
+    }
+
+    .footer-column > a {
+        font-size: 11px;
+    }
+
+    .footer-social a {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        width: min(600px, 90%);
+        margin-left: 6vw;
+    }
+
+    .hero-title {
+        font-size: clamp(40px, 7vw, 62px);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 650px;
+        align-items: flex-end;
+    }
+
+    .hero-backdrop img {
+        object-position: 60% center;
+    }
+
+    .hero::before {
+        background: linear-gradient(
+                to bottom,
+                rgba(5, 5, 5, 0.15) 0%,
+                rgba(5, 5, 5, 0.35) 35%,
+                rgba(5, 5, 5, 0.92) 72%,
+                #080808 100%
+            );
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 20px 55px;
+    }
+
+    .hero-label {
+        margin-bottom: 14px;
+        font-size: 10px;
+    }
+
+    .hero-title {
+        font-size: clamp(36px, 11vw, 52px);
+        letter-spacing: -1.5px;
+        margin-bottom: 14px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.6;
+        -webkit-line-clamp: 3;
+        margin-bottom: 18px;
+    }
+
+    .hero-meta {
+        gap: 7px;
+        margin-bottom: 22px;
+    }
+
+    .hero-meta span {
+        padding: 6px 9px;
+        font-size: 11px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        height: 45px;
+        padding: 0 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero-content {
+        padding: 30px 16px 45px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   MOVIE MODAL
+======================================== */
+
+@media (max-width: 900px) {
+
+    #movieModal {
+        padding: 18px;
+    }
+
+    #modalContent {
+        width: calc(100vw - 36px) !important;
+        max-width: none !important;
+        max-height: calc(100vh - 36px);
+    }
+
+    .modal-backdrop {
+        height: 360px;
+    }
+
+    .modal-movie-info {
+        grid-template-columns: 180px 1fr;
+        gap: 25px;
+        padding: 0 30px 35px;
+        margin-top: -115px;
+    }
+
+    .modal-poster {
+        width: 180px;
+    }
+
+    .modal-details {
+        padding-top: 80px;
+    }
+
+    .modal-title {
+        font-size: clamp(26px, 4vw, 40px);
+    }
+
+    .modal-overview {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .modal-extra {
+        padding: 10px 30px 35px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #movieModal {
+        padding: 14px;
+    }
+
+    #modalContent {
+        width: calc(100vw - 28px) !important;
+        max-height: calc(100vh - 28px);
+        border-radius: 18px;
+        max-width: none !important;
+    }
+
+    #modalClose {
+        top: 14px;
+        right: 14px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .modal-backdrop {
+        height: 300px;
+    }
+
+    .modal-movie-info {
+        grid-template-columns: 150px 1fr;
+        gap: 22px;
+        padding: 0 24px 30px;
+        margin-top: -95px;
+    }
+
+    .modal-poster {
+        width: 150px;
+        border-radius: 11px;
+    }
+
+    .modal-details {
+        padding-top: 65px;
+    }
+
+    .modal-title {
+        font-size: 30px;
+        letter-spacing: -0.5px;
+        line-height: 1.08;
+    }
+
+    .modal-meta {
+        gap: 7px;
+        margin-bottom: 14px;
+        font-size: 12px;
+    }
+
+    .modal-meta > span {
+        padding: 6px 9px;
+    }
+
+    .modal-genres {
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .modal-genres span {
+        padding: 5px 9px;
+        font-size: 11px;
+    }
+
+    .modal-overview {
+        margin-bottom: 18px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .modal-actions {
+        gap: 8px;
+    }
+
+    .modal-actions button {
+        min-height: 40px;
+        padding: 0 15px;
+        font-size: 12px;
+    }
+
+    .trailer-container {
+        margin-top: 20px;
+    }
+
+    .trailer-wrapper {
+        border-radius: 11px;
+    }
+
+    .modal-extra {
+        padding: 5px 24px 30px;
+    }
+
+    .modal-section {
+        margin-top: 38px;
+        padding-top: 23px;
+    }
+
+    .modal-section h3 {
+        font-size: 17px;
+    }
+
+    .cast-container {
+        gap: 14px;
+    }
+
+    .cast-card {
+        flex: 0 0 100px;
+        width: 100px;
+    }
+
+    .cast-image {
+        width: 100px;
+        height: 135px;
+        border-radius: 10px;
+    }
+
+    .provider-list {
+        gap: 8px;
+    }
+
+    .provider-card {
+        min-width: 140px;
+        padding: 9px 11px;
+    }
+
+    .provider-card img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .provider-card span {
+        font-size: 11px;
+    }
+
+    .similar-movies-container {
+        gap: 12px;
+    }
+
+    .similar-movie-card {
+        flex: 0 0 130px;
+        width: 130px;
+        border-radius: 10px;
+    }
+
+    .similar-movie-info {
+        padding: 10px;
+    }
+
+    .similar-movie-info h4 {
+        font-size: 12px;
+    }
+
+    .similar-movie-meta {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #movieModal {
+        padding: 8px;
+    }
+
+    #modalContent {
+        width: calc(100vw - 16px) !important;
+        max-height: calc(100vh - 16px);
+        border-radius: 15px;
+    }
+
+    #modalClose {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .modal-backdrop {
+        height: 230px;
+    }
+
+    .modal-movie-info {
+        grid-template-columns: 105px 1fr;
+        gap: 14px;
+        padding: 0 15px 25px;
+        margin-top: -65px;
+    }
+
+    .modal-poster {
+        width: 105px;
+        border-radius: 9px;
+    }
+
+    .modal-details {
+        padding-top: 42px;
+    }
+
+    .modal-title {
+        font-size: 21px;
+        line-height: 1.1;
+        letter-spacing: -0.3px;
+    }
+
+    .modal-meta {
+        gap: 5px;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .modal-meta > span {
+        padding: 4px 7px;
+        border-radius: 6px;
+    }
+
+    .modal-genres {
+        gap: 5px;
+        margin-bottom: 12px;
+    }
+
+    .modal-genres span {
+        padding: 4px 7px;
+        font-size: 9px;
+    }
+
+    .modal-overview {
+        font-size: 11px;
+        line-height: 1.55;
+        margin-bottom: 14px;
+    }
+
+    .modal-actions {
+        gap: 6px;
+    }
+
+    .modal-actions button {
+        min-height: 35px;
+        padding: 0 10px;
+        border-radius: 7px;
+        font-size: 10px;
+        gap: 5px;
+    }
+
+    .modal-extra {
+        padding: 5px 15px 25px;
+    }
+
+    .modal-section {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    .modal-section h3 {
+        margin-bottom: 16px;
+        padding-left: 11px;
+        font-size: 15px;
+    }
+
+    .modal-section h3::before {
+        width: 2px;
+        height: 16px;
+    }
+
+    .cast-container {
+        gap: 11px;
+    }
+
+    .cast-card {
+        flex: 0 0 82px;
+        width: 82px;
+    }
+
+    .cast-image {
+        width: 82px;
+        height: 110px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .cast-info h4 {
+        font-size: 10px;
+    }
+
+    .cast-info p {
+        font-size: 9px;
+    }
+
+    .provider-group h4 {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .provider-list {
+        gap: 7px;
+    }
+
+    .provider-card {
+        min-width: 100%;
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+
+    .provider-card img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .provider-card span {
+        font-size: 10px;
+    }
+
+    .similar-movies-container {
+        gap: 10px;
+    }
+
+    .similar-movie-card {
+        flex: 0 0 110px;
+        width: 110px;
+        border-radius: 8px;
+    }
+
+    .similar-movie-info {
+        padding: 8px;
+    }
+
+    .similar-movie-info h4 {
+        font-size: 10px;
+    }
+
+    .similar-movie-meta {
+        gap: 6px;
+        margin-top: 5px;
+        font-size: 9px;
+    }
+
+    .trailer-container {
+        margin-top: 18px;
+    }
+
+    .trailer-wrapper {
+        border-radius: 9px;
+    }
+}
+
+
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .search-container {
+        width: 94%;
+
+        padding-top: 90px;
+    }
+
+
+    .search-header {
+        gap: 10px;
+    }
+
+
+    .search-input-wrapper {
+        height: 52px;
+
+        padding: 0 14px;
+    }
+
+
+    #searchInput {
+        font-size: 15px;
+    }
+
+
+    .search-close {
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .search-results {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .search-container {
+        padding-top: 75px;
+    }
+
+
+    .search-results {
+        gap: 12px;
+    }
+
+
+    .search-card-info {
+        padding: 9px;
+    }
+
+
+    .search-card-title {
+        font-size: 13px;
+    }
+
+
+    .search-card-year {
+        font-size: 11px;
+    }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .favorites-container {
+        width: 94%;
+
+        padding-top: 90px;
+    }
+
+
+    .favorites-results {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .favorites-container {
+        width: 92%;
+
+        padding-top: 80px;
+    }
+
+
+    .favorites-header {
+        margin-bottom: 24px;
+    }
+
+
+    .favorites-header h2 {
+        font-size: 25px;
+    }
+
+
+    .favorites-results {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+
+    .favorite-info {
+        padding: 10px;
+    }
+
+
+    .favorite-info h3 {
+        font-size: 13px;
+    }
+
+
+    .favorite-meta {
+        font-size: 11px;
+    }
+
+
+    .favorite-remove {
+        top: 8px;
+        right: 8px;
+
+        width: 32px;
+        height: 32px;
+
+        opacity: 1;
+
+        transform: scale(1);
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL PHONE
+======================================== */
+
+@media (max-width: 480px) {
+
+    .favorites-container {
+        width: 90%;
+
+        padding-top: 70px;
+    }
+
+
+    .favorites-header h2 {
+        font-size: 22px;
+    }
+
+
+    .favorites-header p {
+        font-size: 12px;
+    }
+
+
+    .favorites-close {
+        width: 42px;
+        height: 42px;
+
+        font-size: 16px;
+    }
+
+
+    .favorites-results {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 13px;
+    }
+
+
+    .favorite-info h3 {
+        font-size: 13px;
+    }
+
+
+    .favorite-meta {
+        margin-top: 6px;
+
+        font-size: 10px;
+    }
+
+
+    .favorites-empty {
+        min-height: 350px;
+    }
+
+
+    .favorites-empty > i {
+        width: 75px;
+        height: 75px;
+
+        font-size: 30px;
+    }
+
+
+    .favorites-empty h3 {
+        font-size: 19px;
+    }
+
+
+    .favorites-empty p {
+        font-size: 13px;
+    }
+
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .auth-container {
+        padding: 16px;
+    }
+
+
+    .auth-modal {
+        max-width: 100%;
+
+        padding: 32px 24px;
+
+        border-radius: 16px;
+    }
+
+
+    .auth-header {
+        margin-bottom: 25px;
+    }
+
+
+    .auth-header h2 {
+        font-size: 24px;
+    }
+
+
+    .auth-logo {
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 15px;
+
+        font-size: 21px;
+    }
+
+
+    .auth-input-group {
+        margin-bottom: 16px;
+    }
+
+
+    .auth-input-wrapper input {
+        height: 46px;
+    }
+
+
+    .auth-submit {
+        height: 46px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .auth-modal {
+        padding: 28px 18px;
+    }
+
+
+    .auth-header h2 {
+        font-size: 22px;
+    }
+
+
+    .auth-header p {
+        font-size: 13px;
+    }
+
+}
