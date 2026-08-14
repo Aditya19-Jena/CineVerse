@@ -12,7 +12,7 @@ function initFooter() {
 
   footer.innerHTML = `
     <footer class = "site-footer">
-      <div class = "footer-container">
+      <div class = "footer-content">
         <!-- Brand -->
         <div class="footer-brand">
           <a href="#" class="footer-logo" aria-label="CineVerse Home">

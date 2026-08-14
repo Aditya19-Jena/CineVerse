@@ -2652,3 +2652,361 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+/* =========================================================
+   WHAT SHOULD I WATCH — RESPONSIVE
+   ========================================================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    .ai-recommendation-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+}
+
+
+/* Large phones */
+@media (max-width: 650px) {
+
+    .ai-recommendations-section {
+        padding: 20px;
+    }
+
+    .ai-recommendations-section .section-title {
+        font-size: 22px;
+    }
+
+    .ai-recommendations-section .ai-section-description {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Recommendation cards */
+    .ai-recommendation-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .ai-recommendation-info {
+        padding: 11px;
+    }
+
+    .ai-recommendation-info h3 {
+        font-size: 12px;
+    }
+
+    .ai-recommendation-reason {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .ai-match-badge {
+        top: 8px;
+        left: 8px;
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+}
+
+
+/* Small phones */
+@media (max-width: 420px) {
+
+    .ai-recommendations-section {
+        padding: 16px;
+    }
+
+    .ai-recommendations-section .section-title {
+        font-size: 20px;
+    }
+
+    .ai-recommendations-section .ai-section-description {
+        font-size: 11px;
+    }
+
+    /* One horizontal card per row */
+    .ai-recommendation-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .ai-recommendation-card {
+        display: grid;
+        grid-template-columns: 105px 1fr;
+        min-height: 155px;
+    }
+
+    .ai-recommendation-poster {
+        height: 100%;
+        aspect-ratio: auto;
+    }
+
+    .ai-recommendation-info {
+        padding: 12px;
+    }
+
+    .ai-recommendation-info h3 {
+        font-size: 13px;
+    }
+
+    .ai-recommendation-reason {
+        font-size: 10px;
+        -webkit-line-clamp: 4;
+    }
+
+}
+
+
+/* Very small phones */
+@media (max-width: 340px) {
+
+    .ai-recommendations-section {
+        padding: 14px;
+    }
+
+    .ai-recommendation-card {
+        grid-template-columns: 90px 1fr;
+        min-height: 135px;
+    }
+
+    .ai-recommendation-info {
+        padding: 10px;
+    }
+
+    .ai-recommendation-info h3 {
+        font-size: 12px;
+    }
+
+    .ai-recommendation-meta span {
+        font-size: 8px;
+    }
+
+    .ai-recommendation-reason {
+        font-size: 9px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOOD → MOVIE — RESPONSIVE
+   ========================================================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+
+    .mood-results-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+}
+
+
+/* Large phones */
+@media (max-width: 650px) {
+
+    .mood-movie-section {
+        padding: 20px;
+    }
+
+    .mood-movie-section .section-title {
+        font-size: 22px;
+    }
+
+    .mood-movie-section .ai-section-description {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    /* Mood buttons */
+    .mood-selector {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .mood-btn {
+        min-height: 125px;
+        padding: 14px;
+    }
+
+    .mood-btn > span {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 13px;
+        font-size: 18px;
+    }
+
+    .mood-btn strong {
+        font-size: 13px;
+    }
+
+    .mood-btn small {
+        font-size: 10px;
+    }
+
+    /* Movie results */
+    .mood-results-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .mood-result-info {
+        padding: 11px;
+    }
+
+    .mood-result-info h3 {
+        font-size: 12px;
+    }
+
+    .mood-result-info p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .mood-score {
+        top: 8px;
+        left: 8px;
+        min-width: 42px;
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+}
+
+
+/* Small phones */
+@media (max-width: 420px) {
+
+    .mood-movie-section {
+        padding: 16px;
+    }
+
+    .mood-movie-section .section-title {
+        font-size: 20px;
+    }
+
+    /* Mood buttons become horizontal */
+    .mood-selector {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .mood-btn {
+        min-height: auto;
+        padding: 12px;
+        flex-direction: row;
+        align-items: center;
+        gap: 13px;
+    }
+
+    .mood-btn > span {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+    }
+
+    .mood-btn strong {
+        margin-bottom: 3px;
+        font-size: 13px;
+    }
+
+    .mood-btn small {
+        font-size: 10px;
+    }
+
+    /* Movie cards become one column */
+    .mood-results-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .mood-result-card {
+        display: grid;
+        grid-template-columns: 105px 1fr;
+        min-height: 155px;
+    }
+
+    .mood-result-poster {
+        height: 100%;
+        aspect-ratio: auto;
+    }
+
+    .mood-result-info {
+        padding: 12px;
+    }
+
+    .mood-result-info h3 {
+        font-size: 13px;
+    }
+
+    .mood-result-info p {
+        font-size: 10px;
+        -webkit-line-clamp: 4;
+    }
+
+    .mood-score {
+        top: 8px;
+        left: 8px;
+    }
+
+}
+
+
+/* Very small phones */
+@media (max-width: 340px) {
+
+    .mood-movie-section {
+        padding: 14px;
+    }
+
+    .mood-result-card {
+        grid-template-columns: 90px 1fr;
+        min-height: 135px;
+    }
+
+    .mood-result-info {
+        padding: 10px;
+    }
+
+    .mood-result-info h3 {
+        font-size: 12px;
+    }
+
+    .mood-result-info p {
+        font-size: 9px;
+    }
+
+}
